@@ -1,6 +1,9 @@
 # Changelog
 [Back](README.md)
 
+## 1.2 (2021-12-01)
+1. Add OverloadResolutionPriorityAttribute
+
 ## 1.1 (2024-01-19)
 1. Add AsyncMethodBuilderAttribute
 1. Add InterpolatedStringHandlerArgumentAttribute
