@@ -1,7 +1,13 @@
 # Changelog
 [Back](README.md)
 
-## 1.2 (2021-12-01)
+## 1.2.1 (2025-01-13)
+1. Add .NET Standard 2.0 support
+    * It is now easily referenced in the .NET Standard 2.0 library.
+1. Drop .NET 6 and 7 support
+    * These .NET versions have been discontinued by Microsoft. However, it is still available via .NET Standard 2.0, but it includes unnecessary types that are already built into that framework.
+
+## 1.2 (2024-12-01)
 1. Add OverloadResolutionPriorityAttribute
 
 ## 1.1 (2024-01-19)
