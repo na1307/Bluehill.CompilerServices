@@ -23,5 +23,5 @@ namespace System.Runtime.CompilerServices;
     | AttributeTargets.Method
     | AttributeTargets.Property
     | AttributeTargets.Event, Inherited = false)]
-public sealed class SkipLocalsInitAttribute : Attribute { }
+public sealed class SkipLocalsInitAttribute : Attribute;
 #endif
