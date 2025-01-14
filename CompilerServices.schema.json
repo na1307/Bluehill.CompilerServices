@@ -24,7 +24,7 @@
       "CallerArgumentExpressionAttribute": {
         "type": "boolean"
       },
-      "NullableAttributes_NETCOREAPP3_0": {
+      "NullableAnotationAttributes_NETCOREAPP3_0": {
         "type": "boolean"
       },
       "IsExternalInit": {
@@ -33,7 +33,7 @@
       "ModuleInitializerAttribute": {
         "type": "boolean"
       },
-      "NullableAttributes_NET5_0": {
+      "NullableAnotationAttributes_NET5_0": {
         "type": "boolean"
       },
       "SkipLocalsInitAttribute": {
