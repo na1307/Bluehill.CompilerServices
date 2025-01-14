@@ -1,7 +1,12 @@
 #if !NET5_0_OR_GREATER
+using System.ComponentModel;
+
 namespace System.Runtime.CompilerServices;
 
-#pragma warning disable CS1591 // 공개된 형식 또는 멤버에 대한 XML 주석이 없습니다.
+/// <summary>
+/// Reserved to be used by the compiler for tracking metadata.
+/// This class should not be used by developers in source code.
+/// </summary>
+[EditorBrowsable(EditorBrowsableState.Never)]
 public sealed class IsExternalInit;
-#pragma warning restore CS1591 // 공개된 형식 또는 멤버에 대한 XML 주석이 없습니다.
 #endif
