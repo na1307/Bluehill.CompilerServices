@@ -1,0 +1,86 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Generated schema for Root",
+    "type": "object",
+    "properties": {
+      "ExtensionAttribute": {
+        "type": "boolean"
+      },
+      "CallerFilePathAttribute": {
+        "type": "boolean"
+      },
+      "CallerLineNumberAttribute": {
+        "type": "boolean"
+      },
+      "CallerMemberNameAttribute": {
+        "type": "boolean"
+      },
+      "IsByRefLikeAttribute": {
+        "type": "boolean"
+      },
+      "IsReadOnlyAttribute": {
+        "type": "boolean"
+      },
+      "CallerArgumentExpressionAttribute": {
+        "type": "boolean"
+      },
+      "NullableAttributes_NETCOREAPP3_0": {
+        "type": "boolean"
+      },
+      "IsExternalInit": {
+        "type": "boolean"
+      },
+      "ModuleInitializerAttribute": {
+        "type": "boolean"
+      },
+      "NullableAttributes_NET5_0": {
+        "type": "boolean"
+      },
+      "SkipLocalsInitAttribute": {
+        "type": "boolean"
+      },
+      "AsyncMethodBuilderAttribute": {
+        "type": "boolean"
+      },
+      "InterpolatedStringHandlerArgumentAttribute": {
+        "type": "boolean"
+      },
+      "InterpolatedStringHandlerAttribute": {
+        "type": "boolean"
+      },
+      "CompilerFeatureRequiredAttribute": {
+        "type": "boolean"
+      },
+      "NativeIntegerAttribute": {
+        "type": "boolean"
+      },
+      "RequiredMemberAttribute": {
+        "type": "boolean"
+      },
+      "SetsRequiredMembersAttribute": {
+        "type": "boolean"
+      },
+      "NullableAttribute": {
+        "type": "boolean"
+      },
+      "NullableContextAttribute": {
+        "type": "boolean"
+      },
+      "RefSafetyRulesAttribute": {
+        "type": "boolean"
+      },
+      "RequiresLocationAttribute": {
+        "type": "boolean"
+      },
+      "ScopedRefAttribute": {
+        "type": "boolean"
+      },
+      "OverloadResolutionPriorityAttribute": {
+        "type": "boolean"
+      },
+      "ExperimentalAttribute": {
+        "type": "boolean"
+      }
+    },
+    "additionalProperties": false
+  }
