@@ -5,13 +5,6 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <ApiCompatGenerateSuppressionFile>true</ApiCompatGenerateSuppressionFile>
     <Description>Compiler Services for C# features</Description>
-    <Product>Bluehill.CompilerServices</Product>
-    <PackageProjectUrl>https://na1307.github.io/Bluehill.CompilerServices</PackageProjectUrl>
-    <PackageTags>compilerservices;na1307;bluehill</PackageTags>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>https://na1307.github.io/Bluehill.CompilerServices/CHANGELOG.html</PackageReleaseNotes>
-    <RepositoryUrl>https://github.com/na1307/Bluehill.CompilerServices</RepositoryUrl>
     <AssemblyVersion>1</AssemblyVersion>
     <FileVersion>1.2.1</FileVersion>
     <Version>1.2.1</Version>
