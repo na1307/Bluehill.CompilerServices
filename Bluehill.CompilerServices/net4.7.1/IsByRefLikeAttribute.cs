@@ -1,4 +1,4 @@
-#if !NET471_OR_GREATER && !NETSTANDARD2_1_OR_GREATER && !NETCOREAPP2_0_OR_GREATER
+﻿#if !NET471_OR_GREATER && !NETSTANDARD2_1_OR_GREATER && !NETCOREAPP2_0_OR_GREATER
 using System.ComponentModel;
 
 namespace System.Runtime.CompilerServices;
@@ -9,7 +9,12 @@ namespace System.Runtime.CompilerServices;
 /// </summary>
 [EditorBrowsable(EditorBrowsableState.Never)]
 [AttributeUsage(AttributeTargets.Struct)]
-public sealed class IsByRefLikeAttribute : Attribute {
+#if BHCS
+public
+#else
+internal
+#endif
+sealed class IsByRefLikeAttribute : Attribute {
     /// <summary>Initializes the attribute.</summary>
     public IsByRefLikeAttribute() { }
 }

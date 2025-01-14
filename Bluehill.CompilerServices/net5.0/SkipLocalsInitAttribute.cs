@@ -1,4 +1,4 @@
-#if !NET5_0_OR_GREATER
+﻿#if !NET5_0_OR_GREATER
 namespace System.Runtime.CompilerServices;
 
 /// <summary>
@@ -23,5 +23,10 @@ namespace System.Runtime.CompilerServices;
     | AttributeTargets.Method
     | AttributeTargets.Property
     | AttributeTargets.Event, Inherited = false)]
-public sealed class SkipLocalsInitAttribute : Attribute;
+#if BHCS
+public
+#else
+internal
+#endif
+sealed class SkipLocalsInitAttribute : Attribute;
 #endif

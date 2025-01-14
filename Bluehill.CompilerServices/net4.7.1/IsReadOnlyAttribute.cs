@@ -1,4 +1,4 @@
-#if !NET471_OR_GREATER && !NETSTANDARD2_1_OR_GREATER && !NETCOREAPP2_0_OR_GREATER
+﻿#if !NET471_OR_GREATER && !NETSTANDARD2_1_OR_GREATER && !NETCOREAPP2_0_OR_GREATER
 using System.ComponentModel;
 
 namespace System.Runtime.CompilerServices;
@@ -9,7 +9,12 @@ namespace System.Runtime.CompilerServices;
 /// </summary>
 [EditorBrowsable(EditorBrowsableState.Never)]
 [AttributeUsage(AttributeTargets.All, Inherited = false)]
-public sealed class IsReadOnlyAttribute : Attribute {
+#if BHCS
+public
+#else
+internal
+#endif
+sealed class IsReadOnlyAttribute : Attribute {
     /// <summary>Initializes the attribute.</summary>
     public IsReadOnlyAttribute() { }
 }

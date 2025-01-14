@@ -1,4 +1,4 @@
-#if !NET6_0_OR_GREATER
+﻿#if !NET6_0_OR_GREATER
 namespace System.Runtime.CompilerServices;
 
 /// <summary>
@@ -7,7 +7,12 @@ namespace System.Runtime.CompilerServices;
 /// of an async method.
 /// </summary>
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Interface | AttributeTargets.Delegate | AttributeTargets.Enum | AttributeTargets.Method, Inherited = false, AllowMultiple = false)]
-public sealed class AsyncMethodBuilderAttribute : Attribute {
+#if BHCS
+public
+#else
+internal
+#endif
+sealed class AsyncMethodBuilderAttribute : Attribute {
     /// <summary>Initializes the <see cref="AsyncMethodBuilderAttribute"/>.</summary>
     /// <param name="builderType">The <see cref="Type"/> of the associated builder.</param>
     public AsyncMethodBuilderAttribute(Type builderType) => BuilderType = builderType;

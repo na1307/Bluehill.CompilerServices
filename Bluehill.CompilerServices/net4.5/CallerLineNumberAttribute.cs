@@ -1,8 +1,13 @@
-#if !NET45_OR_GREATER && !NETSTANDARD1_0_OR_GREATER && !NETCOREAPP1_0_OR_GREATER
+ï»¿#if !NET45_OR_GREATER && !NETSTANDARD1_0_OR_GREATER && !NETCOREAPP1_0_OR_GREATER
 namespace System.Runtime.CompilerServices;
 
 [AttributeUsage(AttributeTargets.Parameter, Inherited = false)]
-#pragma warning disable CS1591 // °ø°³µÈ Çü½Ä ¶Ç´Â ¸â¹ö¿¡ ´ëÇÑ XML ÁÖ¼®ÀÌ ¾ø½À´Ï´Ù.
-public sealed class CallerLineNumberAttribute : Attribute;
-#pragma warning restore CS1591 // °ø°³µÈ Çü½Ä ¶Ç´Â ¸â¹ö¿¡ ´ëÇÑ XML ÁÖ¼®ÀÌ ¾ø½À´Ï´Ù.
+#pragma warning disable CS1591 // ê³µê°œëœ í˜•ì‹ ë˜ëŠ” ë©¤ë²„ì— ëŒ€í•œ XML ì£¼ì„ì´ ì—†ìŠµë‹ˆë‹¤.
+#if BHCS
+public
+#else
+internal
+#endif
+sealed class CallerLineNumberAttribute : Attribute;
+#pragma warning restore CS1591 // ê³µê°œëœ í˜•ì‹ ë˜ëŠ” ë©¤ë²„ì— ëŒ€í•œ XML ì£¼ì„ì´ ì—†ìŠµë‹ˆë‹¤.
 #endif

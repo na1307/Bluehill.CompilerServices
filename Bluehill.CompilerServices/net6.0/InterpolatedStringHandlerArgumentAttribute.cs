@@ -1,9 +1,14 @@
-#if !NET6_0_OR_GREATER
+﻿#if !NET6_0_OR_GREATER
 namespace System.Runtime.CompilerServices;
 
 /// <summary>Indicates which arguments to a method involving an interpolated string handler should be passed to that handler.</summary>
 [AttributeUsage(AttributeTargets.Parameter, AllowMultiple = false, Inherited = false)]
-public sealed class InterpolatedStringHandlerArgumentAttribute : Attribute {
+#if BHCS
+public
+#else
+internal
+#endif
+sealed class InterpolatedStringHandlerArgumentAttribute : Attribute {
     /// <summary>Initializes a new instance of the <see cref="InterpolatedStringHandlerArgumentAttribute"/> class.</summary>
     /// <param name="argument">The name of the argument that should be passed to the handler.</param>
     /// <remarks>The empty string may be used as the name of the receiver in an instance method.</remarks>

@@ -1,0 +1,5 @@
+<Project>
+  <ItemGroup>
+    <AssemblyAttribute Remove="System.CLSCompliantAttribute" />
+  </ItemGroup>
+</Project>

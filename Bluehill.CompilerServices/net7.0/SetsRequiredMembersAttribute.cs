@@ -1,4 +1,4 @@
-#if !NET7_0_OR_GREATER
+﻿#if !NET7_0_OR_GREATER
 namespace System.Diagnostics.CodeAnalysis;
 
 /// <summary>
@@ -6,5 +6,10 @@ namespace System.Diagnostics.CodeAnalysis;
 /// do not need to set any required members themselves.
 /// </summary>
 [AttributeUsage(AttributeTargets.Constructor, AllowMultiple = false, Inherited = false)]
-public sealed class SetsRequiredMembersAttribute : Attribute;
+#if BHCS
+public
+#else
+internal
+#endif
+sealed class SetsRequiredMembersAttribute : Attribute;
 #endif

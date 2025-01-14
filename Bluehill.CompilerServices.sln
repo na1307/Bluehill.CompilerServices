@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bluehill.CompilerServices", "Bluehill.CompilerServices\Bluehill.CompilerServices.csproj", "{A3F6205E-F9C0-4F2D-B247-235D377F2555}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bluehill.CompilerServices.SourceGenerator", "Bluehill.CompilerServices.SourceGenerator\Bluehill.CompilerServices.SourceGenerator.csproj", "{7A420DB3-CFAF-4E63-8E77-22AC12683456}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A3F6205E-F9C0-4F2D-B247-235D377F2555}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3F6205E-F9C0-4F2D-B247-235D377F2555}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3F6205E-F9C0-4F2D-B247-235D377F2555}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A420DB3-CFAF-4E63-8E77-22AC12683456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A420DB3-CFAF-4E63-8E77-22AC12683456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A420DB3-CFAF-4E63-8E77-22AC12683456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A420DB3-CFAF-4E63-8E77-22AC12683456}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

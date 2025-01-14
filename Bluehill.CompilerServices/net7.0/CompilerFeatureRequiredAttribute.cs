@@ -1,14 +1,19 @@
-#if !NET7_0_OR_GREATER
+ï»¿#if !NET7_0_OR_GREATER
 namespace System.Runtime.CompilerServices;
 
 /// <summary>
 /// Indicates that compiler support for a particular feature is required for the location where this attribute is applied.
 /// </summary>
 [AttributeUsage(AttributeTargets.All, AllowMultiple = true, Inherited = false)]
-public sealed class CompilerFeatureRequiredAttribute : Attribute {
-#pragma warning disable CS1591 // °ø°³µÈ Çü½Ä ¶Ç´Â ¸â¹ö¿¡ ´ëÇÑ XML ÁÖ¼®ÀÌ ¾ø½À´Ï´Ù.
+#if BHCS
+public
+#else
+internal
+#endif
+sealed class CompilerFeatureRequiredAttribute : Attribute {
+#pragma warning disable CS1591 // ê³µê°œëœ í˜•ì‹ ë˜ëŠ” ë©¤ë²„ì— ëŒ€í•œ XML ì£¼ì„ì´ ì—†ìŠµë‹ˆë‹¤.
     public CompilerFeatureRequiredAttribute(string featureName) => FeatureName = featureName;
-#pragma warning restore CS1591 // °ø°³µÈ Çü½Ä ¶Ç´Â ¸â¹ö¿¡ ´ëÇÑ XML ÁÖ¼®ÀÌ ¾ø½À´Ï´Ù.
+#pragma warning restore CS1591 // ê³µê°œëœ í˜•ì‹ ë˜ëŠ” ë©¤ë²„ì— ëŒ€í•œ XML ì£¼ì„ì´ ì—†ìŠµë‹ˆë‹¤.
 
     /// <summary>
     /// The name of the compiler feature.

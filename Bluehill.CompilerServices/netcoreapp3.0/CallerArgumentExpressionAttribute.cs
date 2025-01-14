@@ -1,12 +1,17 @@
-#if !NETCOREAPP3_0_OR_GREATER
+ï»¿#if !NETCOREAPP3_0_OR_GREATER
 namespace System.Runtime.CompilerServices;
 
 [AttributeUsage(AttributeTargets.Parameter, AllowMultiple = false, Inherited = false)]
-#pragma warning disable CS1591 // °ø°³µÈ Çü½Ä ¶Ç´Â ¸â¹ö¿¡ ´ëÇÑ XML ÁÖ¼®ÀÌ ¾ø½À´Ï´Ù.
-public sealed class CallerArgumentExpressionAttribute : Attribute {
+#pragma warning disable CS1591 // ê³µê°œëœ í˜•ì‹ ë˜ëŠ” ë©¤ë²„ì— ëŒ€í•œ XML ì£¼ì„ì´ ì—†ìŠµë‹ˆë‹¤.
+#if BHCS
+public
+#else
+internal
+#endif
+sealed class CallerArgumentExpressionAttribute : Attribute {
     public CallerArgumentExpressionAttribute(string parameterName) => ParameterName = parameterName;
 
     public string ParameterName { get; }
-#pragma warning restore CS1591 // °ø°³µÈ Çü½Ä ¶Ç´Â ¸â¹ö¿¡ ´ëÇÑ XML ÁÖ¼®ÀÌ ¾ø½À´Ï´Ù.
+#pragma warning restore CS1591 // ê³µê°œëœ í˜•ì‹ ë˜ëŠ” ë©¤ë²„ì— ëŒ€í•œ XML ì£¼ì„ì´ ì—†ìŠµë‹ˆë‹¤.
 }
 #endif

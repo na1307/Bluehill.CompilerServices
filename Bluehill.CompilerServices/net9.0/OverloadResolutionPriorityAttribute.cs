@@ -1,11 +1,16 @@
-#if !NET9_0_OR_GREATER
+﻿#if !NET9_0_OR_GREATER
 namespace System.Runtime.CompilerServices;
 
 /// <summary>
 /// Specifies the priority of a member in overload resolution. When unspecified, the default priority is 0.
 /// </summary>
 [AttributeUsage(AttributeTargets.Method | AttributeTargets.Constructor | AttributeTargets.Property, AllowMultiple = false, Inherited = false)]
-public sealed class OverloadResolutionPriorityAttribute : Attribute {
+#if BHCS
+public
+#else
+internal
+#endif
+sealed class OverloadResolutionPriorityAttribute : Attribute {
     /// <summary>
     /// Initializes a new instance of the <see cref="OverloadResolutionPriorityAttribute"/> class.
     /// </summary>

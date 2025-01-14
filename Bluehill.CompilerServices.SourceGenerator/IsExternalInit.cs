@@ -1,4 +1,3 @@
-﻿#if !NET5_0_OR_GREATER
 using System.ComponentModel;
 
 namespace System.Runtime.CompilerServices;
@@ -8,10 +7,4 @@ namespace System.Runtime.CompilerServices;
 /// This class should not be used by developers in source code.
 /// </summary>
 [EditorBrowsable(EditorBrowsableState.Never)]
-#if BHCS
-public
-#else
-internal
-#endif
-sealed class IsExternalInit;
-#endif
+internal sealed class IsExternalInit;

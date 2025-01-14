@@ -1,4 +1,4 @@
-#if !NET8_0_OR_GREATER
+﻿#if !NET8_0_OR_GREATER
 using System.ComponentModel;
 
 namespace System.Runtime.CompilerServices;
@@ -9,7 +9,12 @@ namespace System.Runtime.CompilerServices;
 /// </summary>
 [EditorBrowsable(EditorBrowsableState.Never)]
 [AttributeUsage(AttributeTargets.Parameter, Inherited = false)]
-public sealed class ScopedRefAttribute : Attribute {
+#if BHCS
+public
+#else
+internal
+#endif
+sealed class ScopedRefAttribute : Attribute {
     /// <summary>Initializes the attribute.</summary>
     public ScopedRefAttribute() { }
 }

@@ -1,4 +1,4 @@
-#if !NET8_0_OR_GREATER
+﻿#if !NET8_0_OR_GREATER
 using System.ComponentModel;
 
 namespace System.Runtime.CompilerServices;
@@ -9,7 +9,12 @@ namespace System.Runtime.CompilerServices;
 /// </summary>
 [EditorBrowsable(EditorBrowsableState.Never)]
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Event | AttributeTargets.Parameter | AttributeTargets.ReturnValue | AttributeTargets.GenericParameter, Inherited = false)]
-public sealed class NullableAttribute : Attribute {
+#if BHCS
+public
+#else
+internal
+#endif
+sealed class NullableAttribute : Attribute {
     /// <summary>Flags specifying metadata related to nullable reference types.</summary>
     public readonly byte[] NullableFlags;
 
