@@ -17,6 +17,7 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+    <None Include="Bluehill.CompilerServices.SourceGenerator.props" Pack="true" PackagePath="build\" />
     <None Update="tools\*.ps1" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath="" />
     <None Include="$(OutputPath)\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
   </ItemGroup>
