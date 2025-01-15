@@ -23,6 +23,7 @@
   <ItemGroup>
     <EmbeddedResource Include="..\Bluehill.CompilerServices\**\*.cs" Visible="false" />
     <EmbeddedResource Remove="..\Bluehill.CompilerServices\obj\**\*.cs" />
+    <EmbeddedResource Include="..\CompilerServices.schema.json" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="JsonSchema.Net" PrivateAssets="all" />

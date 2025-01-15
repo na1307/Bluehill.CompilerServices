@@ -26,23 +26,19 @@ public sealed class CompilerServicesGenerator : IIncrementalGenerator {
             throw new ArgumentException("Something went wrong", nameof(tuple));
         }
 
+        JsonSchema schema;
+
+        using (var schemaStream = executingAssembly.GetManifestResourceStream(files.Single(f => f.EndsWith("CompilerServices.schema.json")))) {
+            using StreamReader sr = new(schemaStream);
+
+            schema = JsonSchema.FromText(sr.ReadToEnd());
+        }
+
         var json = JsonDocument.Parse(content);
+        var evaluate = schema.Evaluate(json);
 
-        try {
-            using HttpClient httpClient = new();
-
-            var schemaUrl = json.RootElement.TryGetProperty("$schema", out var value)
-                ? value.GetString() ?? throw new InvalidOperationException("Schema url can't be null.")
-                : "https://raw.githubusercontent.com/na1307/Bluehill.CompilerServices/refs/heads/main/CompilerServices.schema.json";
-
-            var schemaText = httpClient.GetStringAsync(new Uri(schemaUrl)).GetAwaiter().GetResult();
-            var evaluate = JsonSchema.FromText(schemaText).Evaluate(json);
-
-            if (!evaluate.IsValid) {
-                throw new InvalidOperationException($"CompilerServices.json is not valid:\n\n{string.Join("\n", evaluate.Errors.Select(kvp => $"{kvp.Key}: {kvp.Value}"))}");
-            }
-        } catch (HttpRequestException) {
-            context.ReportDiagnostic(Diagnostic.Create("BHCSSG01", string.Empty, "CompilerServices.json validation failed because the schema could not be fetched.", DiagnosticSeverity.Warning, DiagnosticSeverity.Warning, true, 1));
+        if (!evaluate.IsValid) {
+            throw new InvalidOperationException("CompilerServices.json is not valid.");
         }
 
         generate(context, json.Deserialize<GeneratableFiles>()!);
