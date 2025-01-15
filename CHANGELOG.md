@@ -1,6 +1,10 @@
 # Changelog
 [Back](README.md)
 
+## 1.3 (2025-01-15)
+1. Add Message property in ExperimentalAttribute
+1. Add Source generator version
+
 ## 1.2.1 (2025-01-13)
 1. Add .NET Standard 2.0 support
     * It is now easily referenced in the .NET Standard 2.0 library.
